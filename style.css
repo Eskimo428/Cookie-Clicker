@@ -1,0 +1,42 @@
+.conatiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 30px;
+    color: #b47331;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: -2px 2px 2px #b47331,
+        2px 0px 15px #b47331;
+}
+
+.clicker__cookie {
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 50%;
+
+
+}
+
+.changesize {
+    width: 250px;
+    height: 150;
+}
+
+.clicker__status {
+    display: flex;
+    flex-direction: column;
+    color: #b47331;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+
+}
+
+body {
+    font-family: serif;
+    background-color: rgb(255, 255, 255);
+}
