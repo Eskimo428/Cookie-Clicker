@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./style.css">
     <title>Игра-кликер</title>
+
 </head>
 
 <body>
@@ -17,16 +20,83 @@
             </h1>
         </header>
         <main class="content">
-            <div class="card">
+            <div class="screen">
+
+                <h2 class="header">Выберите персонажа</h2>
+                <ul class="flex">
+                    <li class="cookie-list" data-character="1">Тусовщик <img src="https://i.ibb.co/Zx3xPHk/cookie-2.png"
+                            class="animate__animated  animate__lightSpeedInLeft  clicker__cookie" alt="" width="180"
+                            id="jello"></li>
+                    <li class="cookie-list" data-character="2">Злюка <img src="https://i.ibb.co/9Vchk4J/cookie.png"
+                            class="animate__animated animate__bounce clicker__cookie " alt="" width="200" id="shake">
+                    </li>
+                    <li class="cookie-list" data-character="3">Имбирный чел <img src="https://i.ibb.co/fxJv8LK/cookie-3.png"
+                            class="animate__animated animate__bounce animate__flip clicker__cookie" alt="" width="180" id="flip">
+                    </li>
+                    <li class="cookie-list" data-character="4">Милашка <img src="https://i.ibb.co/qny1MJq/cookie-4.png"
+                            class="animate__animated animate__bounce clicker__cookie" alt="" width="180"
+                            id="rubber"></li>
+                    <li class="cookie-list" data-character="5">Ширшавый <img src="https://i.ibb.co/9nZHn0B/cookie-5.png"
+                            class="animate__animated animate__bounceInRight  clicker__cookie" alt="" width="200"
+                            id="bounceInRight"></li>
+                </ul>
+                <a href="#" class="start btns" id="start">Начать игру</a>
+            </div>
+
+
+            <div class="screen">
+                <h1 class="header">Выберите время</h1>
+                <ul class="time-list" id="time-list">
+                    <li>
+                        <button class="time-btn time btns" data-time="15">
+                            15 сек
+                        </button>
+                    </li>
+                    <li>
+                        <button class="time-btn time btns" data-time="30">
+                            30 сек
+                        </button>
+                    </li>
+                    <li>
+                        <button class="time-btn time btns" data-time="45">
+                            45 сек
+                        </button>
+                    </li>
+                    <li>
+                        <button class="time-btn time btns" data-time="60">
+                            60 сек
+                        </button>
+                    </li>
+                </ul>
+
+                <a class=" time btns start" href="http://127.0.0.1:5500/">Назад к выбору персонажа</a>
+
+            </div>
+
+
+            <div class="screen conatiner">
+                <h3 class="time">Осталось <span class="red" id="time">00:00</span></h3>
                 <div class="clicker">
                     <div class="clicker__status">
-                        <div> Всего кликов <span id="clicker__counter">0</span></div>
-                        <div>Скорость клика<span id="clicker__speed"> 0</span></div>
+                        <li class="list">
+                            Всего кликов <span id="clicker__counter">0</span>
+                        </li>
+                        <li class="list">
+                            Скорость<span id="clicker__speed"> 0</span>
+                        </li>
+
                     </div>
-                    <img src="https://cdn.create.vista.com/api/media/medium/283438606/stock-vector-cute-cookie-with-eyes-illustration?token="
-                        alt="" id="cookie" class="clicker__cookie" width="200">
+                    <div class="board" id="board">
+                        <button class="reset btns" id="reset"> Повторить</button>
+
+                    </div>
+               
+
+
                 </div>
+
             </div>
+
         </main>
     </div>
     <script defer src="./cookie.js"></script>
